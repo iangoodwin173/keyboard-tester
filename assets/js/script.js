@@ -70,7 +70,7 @@ var keys = {
     forwardSlash: document.getElementById('forwardSlash'),
     rightShift: document.getElementById('rightShift'),
     leftControl: document.getElementById('leftControl'),
-    function: document.getElementById('function'),
+    functionKey: document.getElementById('function'),
     windows: document.getElementById('windows'),
     leftAlt: document.getElementById('leftAlt'),
     spacebar: document.getElementById('spacebar'),
@@ -304,6 +304,21 @@ document.addEventListener('keydown', function(event) {
     }
   });
 
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Backspace' || event.code === 'Backspace') {
+      event.preventDefault();
+      backspace.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Backspace' || event.code === 'Backspace') {
+      event.preventDefault();
+      backspace.style.backgroundColor = '#fff'; 
+      
+    }
+  });
 
  document.addEventListener('keydown', function(event) {
     if (event.key === 'q') {
@@ -466,6 +481,71 @@ document.addEventListener('keydown', function(event) {
   });
 
   document.addEventListener('keydown', function(event) {
+    if (event.key === '[') {
+      
+      openBracket.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === '[') {
+      
+      openBracket.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === ']') {
+      
+      closeBracket.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === ']') {
+      
+      closeBracket.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'CapsLock') {
+      
+      capsLock.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'CapsLock') {
+      
+      capsLock.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === '\\') {
+      
+      backslash.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === '\\') {
+      
+      backslash.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+
+  document.addEventListener('keydown', function(event) {
     if (event.key === 'a') {
       
       a.style.backgroundColor = 'green';
@@ -610,6 +690,86 @@ document.addEventListener('keydown', function(event) {
   });
 
   document.addEventListener('keydown', function(event) {
+    if (event.key === ';') {
+      
+      semicolon.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === ';') {
+      
+      semicolon.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === '\'') {
+      
+      apostrophe.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === '\'') {
+      
+      apostrophe.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      
+      enter.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+      
+      enter.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Shift' && event.code === 'ShiftLeft') {
+      event.preventDefault();
+      leftShift.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Shift' && event.code === 'ShiftLeft') {
+      event.preventDefault();
+      leftShift.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Shift' && event.code === 'ShiftRight') {
+      event.preventDefault();
+      rightShift.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Shift' && event.code === 'ShiftRight') {
+      event.preventDefault();
+      rightShift.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
     if (event.key === 'z') {
       
       z.style.backgroundColor = 'green';
@@ -720,3 +880,166 @@ document.addEventListener('keydown', function(event) {
       
     }
   });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === ',') {
+      
+      comma.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === ',') {
+      
+      comma.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === '.') {
+      
+      period.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === '.') {
+      
+      period.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === '/') {
+      
+      forwardSlash.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === '/') {
+      
+      forwardSlash.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Control' && event.code === 'ControlLeft') {
+      
+      leftControl.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Control' && event.code === 'ControlLeft') {
+      
+      leftControl.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Control' && event.code === 'ControlRight') {
+      
+      rightControl.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Control' && event.code === 'ControlRight') {
+      
+      rightControl.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Alt' && event.code === 'AltLeft') {
+      event.preventDefault();
+      leftAlt.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Alt' && event.code === 'AltLeft') {
+      event.preventDefault();
+      leftAlt.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Alt' && event.code === 'AltRight') {
+      event.preventDefault();
+      rightAlt.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Alt' && event.code === 'AltRight') {
+      event.preventDefault();
+      rightAlt.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      tab.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      tab.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Meta') {
+      event.preventDefault();
+      windows.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Meta') {
+      event.preventDefault();
+      windows.style.backgroundColor = '#fff'; 
+      
+    }
+  });
+
+//   document.addEventListener('keydown', function(event) {
+//     if (event.key === 'Function') {
+//       event.preventDefault();
+//       functionKey.style.backgroundColor = 'green';
+      
+//     }
+//   });
+  
+//   document.addEventListener('keyup', function(event) {
+//     if (event.key === 'Function') {
+//       event.preventDefault();
+//       functionKey.style.backgroundColor = '#fff'; 
+      
+//     }
+//   });
+

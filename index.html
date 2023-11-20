@@ -1,127 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Keyboard Layout</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Keyboard Layout</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body onload="setTheme()">
 
-<div class="keyboard">
-  <div class="row">
-    <div class="key row-1" id="esc">Esc</div>
-    <div class="key row-1" id="f1">F1</div>
-    <div class="key row-1" id="f2">F2</div>
-    <div class="key row-1" id="f3">F3</div>
-    <div class="key row-1" id="f4">F4</div>
-    <div class="key row-1" id="f5">F5</div>
-    <div class="key row-1" id="f6">F6</div>
-    <div class="key row-1" id="f7">F7</div>
-    <div class="key row-1" id="f8">F8</div>
-    <div class="key row-1" id="f9">F9</div>
-    <div class="key row-1" id="f10">F10</div>
-    <div class="key row-1" id="f11">F11</div>
-    <div class="key row-1" id="f12">F12</div>
-    <div class="key row-1" id="ins">Ins</div>
-    <div class="key row-1" id="del">Del</div>
-  </div>
-  <div class="row">
-    <div class="key row-2" id="backtick">`</div>
-    <div class="key row-2" id="num1">1</div>
-    <div class="key row-2" id="num2">2</div>
-    <div class="key row-2" id="num3">3</div>
-    <div class="key row-2" id="num4">4</div>
-    <div class="key row-2" id="num5">5</div>
-    <div class="key row-2" id="num6">6</div>
-    <div class="key row-2" id="num7">7</div>
-    <div class="key row-2" id="num8">8</div>
-    <div class="key row-2" id="num9">9</div>
-    <div class="key row-2" id="num0">0</div>
-    <div class="key row-2" id="dash">-</div>
-    <div class="key row-2" id="equals">=</div>
-    <div class="key row-2" id="backspace">Backspace</div>
-  </div>
-  <div class="row">
-    <div class="key row-3" id="tab">Tab</div>
-    <div class="key row-3" id="q">Q</div>
-    <div class="key row-3" id="w">W</div>
-    <div class="key row-3" id="e">E</div>
-    <div class="key row-3" id="r">R</div>
-    <div class="key row-3" id="t">T</div>
-    <div class="key row-3" id="y">Y</div>
-    <div class="key row-3" id="u">U</div>
-    <div class="key row-3" id="i">I</div>
-    <div class="key row-3" id="o">O</div>
-    <div class="key row-3" id="p">P</div>
-    <div class="key row-3" id="openBracket">[</div>
-    <div class="key row-3" id="closeBracket">]</div>
-    <div class="key row-3" id="backslash">\</div>
-  </div>
-  <div class="row">
-    <div class="key row-4" id="capsLock">Caps Lock</div>
-    <div class="key row-4" id="a">A</div>
-    <div class="key row-4" id="s">S</div>
-    <div class="key row-4" id="d">D</div>
-    <div class="key row-4" id="f">F</div>
-    <div class="key row-4" id="g">G</div>
-    <div class="key row-4" id="h">H</div>
-    <div class="key row-4" id="j">J</div>
-    <div class="key row-4" id="k">K</div>
-    <div class="key row-4" id="l">L</div>
-    <div class="key row-4" id="semicolon">;</div>
-    <div class="key row-4" id="apostrophe">'</div>
-    <div class="key row-4" id="enter">Enter</div>
-  </div>
-  <div class="row">
-    <div class="key row-5" id="leftShift">Shift</div>
-    <div class="key row-5" id="z">Z</div>
-    <div class="key row-5" id="x">X</div>
-    <div class="key row-5" id="c">C</div>
-    <div class="key row-5" id="v">V</div>
-    <div class="key row-5" id="b">B</div>
-    <div class="key row-5" id="n">N</div>
-    <div class="key row-5" id="m">M</div>
-    <div class="key row-5" id="comma">,</div>
-    <div class="key row-5" id="period">.</div>
-    <div class="key row-5" id="forwardSlash">/</div>
-    <div class="key row-5" id="rightShift">Shift</div>
-  </div>
-  <div class="row">
-    <div class="key row-6" id="leftControl">Ctrl</div>
-    <div class="key row-6" id="function">Fn</div>
-    <div class="key row-6" id="windows">Win</div>
-    <div class="key row-6" id="leftAlt">Alt</div>
-    <div class="key row-6" id="spacebar">Space</div>
-    <div class="key row-6" id="rightAlt">Alt</div>
-    <div class="key row-6" id="rightControl">Ctrl</div>
-  </div>
-</div>
+    <div class="dropdown">
+      <button class="dropdown-btn">Theme</button>
+      <div class="dropdown-content">
+        <li class="theme-list" id="rgb-theme">RGB</li>
+        <li class="theme-list" id="vaporwave-theme">Vaporwave</li>
+        <li class="theme-list" id="holiday-theme">Holiday</li>
+      </div>
+    </div>
+    <div class="keyboard">
+      <div class="row">
+        <div class="key row-1" id="esc">Esc</div>
+        <div class="key row-1" id="f1">F1</div>
+        <div class="key row-1" id="f2">F2</div>
+        <div class="key row-1" id="f3">F3</div>
+        <div class="key row-1" id="f4">F4</div>
+        <div class="key row-1" id="f5">F5</div>
+        <div class="key row-1" id="f6">F6</div>
+        <div class="key row-1" id="f7">F7</div>
+        <div class="key row-1" id="f8">F8</div>
+        <div class="key row-1" id="f9">F9</div>
+        <div class="key row-1" id="f10">F10</div>
+        <div class="key row-1" id="f11">F11</div>
+        <div class="key row-1" id="f12">F12</div>
+        <div class="key row-1" id="ins">Ins</div>
+        <div class="key row-1" id="del">Del</div>
+      </div>
+      <div class="row">
+        <div class="key row-2" id="backtick">`</div>
+        <div class="key row-2" id="num1">1</div>
+        <div class="key row-2" id="num2">2</div>
+        <div class="key row-2" id="num3">3</div>
+        <div class="key row-2" id="num4">4</div>
+        <div class="key row-2" id="num5">5</div>
+        <div class="key row-2" id="num6">6</div>
+        <div class="key row-2" id="num7">7</div>
+        <div class="key row-2" id="num8">8</div>
+        <div class="key row-2" id="num9">9</div>
+        <div class="key row-2" id="num0">0</div>
+        <div class="key row-2" id="dash">-</div>
+        <div class="key row-2" id="equals">=</div>
+        <div class="key row-2" id="backspace">Backspace</div>
+      </div>
+      <div class="row">
+        <div class="key row-3" id="tab">Tab</div>
+        <div class="key row-3" id="q">Q</div>
+        <div class="key row-3" id="w">W</div>
+        <div class="key row-3" id="e">E</div>
+        <div class="key row-3" id="r">R</div>
+        <div class="key row-3" id="t">T</div>
+        <div class="key row-3" id="y">Y</div>
+        <div class="key row-3" id="u">U</div>
+        <div class="key row-3" id="i">I</div>
+        <div class="key row-3" id="o">O</div>
+        <div class="key row-3" id="p">P</div>
+        <div class="key row-3" id="openBracket">[</div>
+        <div class="key row-3" id="closeBracket">]</div>
+        <div class="key row-3" id="backslash">\</div>
+      </div>
+      <div class="row">
+        <div class="key row-4" id="capsLock">Caps Lock</div>
+        <div class="key row-4" id="a">A</div>
+        <div class="key row-4" id="s">S</div>
+        <div class="key row-4" id="d">D</div>
+        <div class="key row-4" id="f">F</div>
+        <div class="key row-4" id="g">G</div>
+        <div class="key row-4" id="h">H</div>
+        <div class="key row-4" id="j">J</div>
+        <div class="key row-4" id="k">K</div>
+        <div class="key row-4" id="l">L</div>
+        <div class="key row-4" id="semicolon">;</div>
+        <div class="key row-4" id="apostrophe">'</div>
+        <div class="key row-4" id="enter">Enter</div>
+      </div>
+      <div class="row">
+        <div class="key row-5" id="leftShift">Shift</div>
+        <div class="key row-5" id="z">Z</div>
+        <div class="key row-5" id="x">X</div>
+        <div class="key row-5" id="c">C</div>
+        <div class="key row-5" id="v">V</div>
+        <div class="key row-5" id="b">B</div>
+        <div class="key row-5" id="n">N</div>
+        <div class="key row-5" id="m">M</div>
+        <div class="key row-5" id="comma">,</div>
+        <div class="key row-5" id="period">.</div>
+        <div class="key row-5" id="forwardSlash">/</div>
+        <div class="key row-5" id="rightShift">Shift</div>
+      </div>
+      <div class="row">
+        <div class="key row-6" id="leftControl">Ctrl</div>
+        <div class="key row-6" id="function">Fn</div>
+        <div class="key row-6" id="windows">Win</div>
+        <div class="key row-6" id="leftAlt">Alt</div>
+        <div class="key row-6" id="spacebar">Space</div>
+        <div class="key row-6" id="rightAlt">Alt</div>
+        <div class="key row-6" id="rightControl">Ctrl</div>
+      </div>
+    </div>
 
-<!-- <div class="numpad">
-  <div class="row">
-    <div class="key" id="numPad7">7</div>
-    <div class="key" id="numPad8">8</div>
-    <div class="key" id="numPad9">9</div>
-  </div>
-  <div class="row">
-    <div class="key" id="numPad4">4</div>
-    <div class="key" id="numPad5">5</div>
-    <div class="key" id="numPad6">6</div>
-    <div class="key" id="numPadPlus">+</div>
-  </div>
-  <div class="row">
-    <div class="key" id="numPad1">1</div>
-    <div class="key" id="numPad2">2</div>
-    <div class="key" id="numPad3">3</div>
-  </div>
-  <div class="row">
-    <div class="key" id="numPad0">0</div>
-    <div class="key" id="numPadDot">.</div>
-     <div class="key" id="numPadEnter">Enter</div> 
-  </div>
-</div> -->
+    <div class="row up-arrow-container">
+      <div class="key up-arrow" id="upArrow">&#8593;</div>
+    </div>
 
-<script src="./assets/js/script.js"></script>
-</body>
+    <div class="row arrow-keys-container">
+      <div class="key arrow-keys" id="leftArrow">&#8592;</div>
+      <div class="key arrow-keys" id="downArrow">&#8595;</div>
+      <div class="key arrow-keys" id="rightArrow">&#8594;</div>
+    </div>
+
+    
+
+    <!-- <div class="numpad-container">
+      <div class="row">
+        <div class="key numpad" id="num7">7</div>
+        <div class="key numpad" id="num8">8</div>
+        <div class="key numpad" id="num9">9</div>
+      </div>
+      <div class="row">
+        <div class="key numpad" id="num4">4</div>
+        <div class="key numpad" id="num5">5</div>
+        <div class="key numpad" id="num6">6</div>
+      </div>
+      <div class="row">
+        <div class="key numpad" id="num1">1</div>
+        <div class="key numpad" id="num2">2</div>
+        <div class="key numpad" id="num3">3</div>
+      </div>
+      <div class="row">
+        <div class="key zero">0</div>
+        <div class="key num-period">.</div>
+      </div>
+    </div> -->
+
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

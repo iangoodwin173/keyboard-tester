@@ -75,8 +75,24 @@ var keys = {
     leftAlt: document.getElementById('leftAlt'),
     spacebar: document.getElementById('spacebar'),
     rightAlt: document.getElementById('rightAlt'),
-    rightControl: document.getElementById('rightControl')
+    rightControl: document.getElementById('rightControl'),
+    leftArrow: document.getElementById('leftArrow'),
+    rightArrow: document.getElementById('rightArrow'),
+    upArrow: document.getElementById('upArrow'),
+    downArrow: document.getElementById('downArrow')
   };
+
+  function setTheme() {
+    document.body.style.backgroundImage = localStorage.getItem('backgroundImage');
+    document.body.style.backgroundSize = localStorage.getItem('backgroundSize');
+    keyboardElement.style.border = localStorage.getItem('borderStyle');
+  }
+
+var rgbTheme = document.getElementById('rgb-theme');
+var vaporwaveTheme = document.getElementById('vaporwave-theme');
+var holidayTheme = document.getElementById('holiday-theme');
+var keyboardElement = document.querySelector('.keyboard');
+
 
 document.addEventListener('keydown', function(event) {
   if (event.key === ' ') {
@@ -89,7 +105,7 @@ document.addEventListener('keydown', function(event) {
 document.addEventListener('keyup', function(event) {
   if (event.key === ' ') {
     
-    spacebar.style.backgroundColor = '#fff'; 
+    spacebar.style.backgroundColor = 'transparent'; 
     
   }
 });
@@ -107,7 +123,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '`') {
       
-      backtick.style.backgroundColor = '#fff'; 
+      backtick.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -123,7 +139,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '1') {
       
-      num1.style.backgroundColor = '#fff'; 
+      num1.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -139,7 +155,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '2') {
       
-      num2.style.backgroundColor = '#fff'; 
+      num2.style.backgroundColor = 'transparent'; 
       
     }
   });  
@@ -155,7 +171,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '3') {
       
-      num3.style.backgroundColor = '#fff'; 
+      num3.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -171,7 +187,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '4') {
       
-      num4.style.backgroundColor = '#fff'; 
+      num4.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -187,7 +203,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '5') {
       
-      num5.style.backgroundColor = '#fff'; 
+      num5.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -203,7 +219,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '6') {
       
-      num6.style.backgroundColor = '#fff'; 
+      num6.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -219,7 +235,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '7') {
       
-      num7.style.backgroundColor = '#fff'; 
+      num7.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -235,7 +251,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '8') {
       
-      num8.style.backgroundColor = '#fff'; 
+      num8.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -251,7 +267,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '9') {
       
-      num9.style.backgroundColor = '#fff'; 
+      num9.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -267,7 +283,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '0') {
       
-      num0.style.backgroundColor = '#fff'; 
+      num0.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -283,7 +299,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '-') {
       
-      dash.style.backgroundColor = '#fff'; 
+      dash.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -299,7 +315,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '=') {
       
-      equals.style.backgroundColor = '#fff'; 
+      equals.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -315,7 +331,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'Backspace' || event.code === 'Backspace') {
       event.preventDefault();
-      backspace.style.backgroundColor = '#fff'; 
+      backspace.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -331,7 +347,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'q') {
       
-      q.style.backgroundColor = '#fff'; 
+      q.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -347,7 +363,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'w') {
       
-      w.style.backgroundColor = '#fff'; 
+      w.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -363,7 +379,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'e') {
       
-      e.style.backgroundColor = '#fff'; 
+      e.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -379,7 +395,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'r') {
       
-      r.style.backgroundColor = '#fff'; 
+      r.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -395,7 +411,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 't') {
       
-      t.style.backgroundColor = '#fff'; 
+      t.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -411,7 +427,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'y') {
       
-      y.style.backgroundColor = '#fff'; 
+      y.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -427,7 +443,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'u') {
       
-      u.style.backgroundColor = '#fff'; 
+      u.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -443,7 +459,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'i') {
       
-      i.style.backgroundColor = '#fff'; 
+      i.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -459,7 +475,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'o') {
       
-      o.style.backgroundColor = '#fff'; 
+      o.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -475,7 +491,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'p') {
       
-      p.style.backgroundColor = '#fff'; 
+      p.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -491,7 +507,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '[') {
       
-      openBracket.style.backgroundColor = '#fff'; 
+      openBracket.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -507,7 +523,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === ']') {
       
-      closeBracket.style.backgroundColor = '#fff'; 
+      closeBracket.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -523,7 +539,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'CapsLock') {
       
-      capsLock.style.backgroundColor = '#fff'; 
+      capsLock.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -539,7 +555,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '\\') {
       
-      backslash.style.backgroundColor = '#fff'; 
+      backslash.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -556,7 +572,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'a') {
       
-      a.style.backgroundColor = '#fff'; 
+      a.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -572,7 +588,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 's') {
       
-      s.style.backgroundColor = '#fff'; 
+      s.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -588,7 +604,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'd') {
       
-      d.style.backgroundColor = '#fff'; 
+      d.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -604,7 +620,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'f') {
       
-      f.style.backgroundColor = '#fff'; 
+      f.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -620,7 +636,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'g') {
       
-      g.style.backgroundColor = '#fff'; 
+      g.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -636,7 +652,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'h') {
       
-      h.style.backgroundColor = '#fff'; 
+      h.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -652,7 +668,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'j') {
       
-      j.style.backgroundColor = '#fff'; 
+      j.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -668,7 +684,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'k') {
       
-      k.style.backgroundColor = '#fff'; 
+      k.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -684,7 +700,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'l') {
       
-      l.style.backgroundColor = '#fff'; 
+      l.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -700,7 +716,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === ';') {
       
-      semicolon.style.backgroundColor = '#fff'; 
+      semicolon.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -716,7 +732,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '\'') {
       
-      apostrophe.style.backgroundColor = '#fff'; 
+      apostrophe.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -732,7 +748,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
       
-      enter.style.backgroundColor = '#fff'; 
+      enter.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -748,7 +764,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'Shift' && event.code === 'ShiftLeft') {
       event.preventDefault();
-      leftShift.style.backgroundColor = '#fff'; 
+      leftShift.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -764,7 +780,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'Shift' && event.code === 'ShiftRight') {
       event.preventDefault();
-      rightShift.style.backgroundColor = '#fff'; 
+      rightShift.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -780,7 +796,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'z') {
       
-      z.style.backgroundColor = '#fff'; 
+      z.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -796,7 +812,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'x') {
       
-      x.style.backgroundColor = '#fff'; 
+      x.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -812,7 +828,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'c') {
       
-      c.style.backgroundColor = '#fff'; 
+      c.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -828,7 +844,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'v') {
       
-      v.style.backgroundColor = '#fff'; 
+      v.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -844,7 +860,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'b') {
       
-      b.style.backgroundColor = '#fff'; 
+      b.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -860,7 +876,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'n') {
       
-      n.style.backgroundColor = '#fff'; 
+      n.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -876,7 +892,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'm') {
       
-      m.style.backgroundColor = '#fff'; 
+      m.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -892,7 +908,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === ',') {
       
-      comma.style.backgroundColor = '#fff'; 
+      comma.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -908,7 +924,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '.') {
       
-      period.style.backgroundColor = '#fff'; 
+      period.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -924,7 +940,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === '/') {
       
-      forwardSlash.style.backgroundColor = '#fff'; 
+      forwardSlash.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -942,7 +958,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'Control' && event.code === 'ControlLeft') {
       
-      leftControl.style.backgroundColor = '#fff'; 
+      leftControl.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -958,7 +974,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'Control' && event.code === 'ControlRight') {
       
-      rightControl.style.backgroundColor = '#fff'; 
+      rightControl.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -974,7 +990,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'Alt' && event.code === 'AltLeft') {
       event.preventDefault();
-      leftAlt.style.backgroundColor = '#fff'; 
+      leftAlt.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -990,7 +1006,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'Alt' && event.code === 'AltRight') {
       event.preventDefault();
-      rightAlt.style.backgroundColor = '#fff'; 
+      rightAlt.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -1006,7 +1022,7 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'Tab') {
       event.preventDefault();
-      tab.style.backgroundColor = '#fff'; 
+      tab.style.backgroundColor = 'transparent'; 
       
     }
   });
@@ -1022,24 +1038,339 @@ document.addEventListener('keydown', function(event) {
   document.addEventListener('keyup', function(event) {
     if (event.key === 'Meta') {
       event.preventDefault();
-      windows.style.backgroundColor = '#fff'; 
+      windows.style.backgroundColor = 'transparent'; 
       
     }
   });
 
-//   document.addEventListener('keydown', function(event) {
-//     if (event.key === 'Function') {
-//       event.preventDefault();
-//       functionKey.style.backgroundColor = 'green';
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      esc.style.backgroundColor = 'green';
       
-//     }
-//   });
+    }
+  });
   
-//   document.addEventListener('keyup', function(event) {
-//     if (event.key === 'Function') {
-//       event.preventDefault();
-//       functionKey.style.backgroundColor = '#fff'; 
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      esc.style.backgroundColor = 'transparent'; 
       
-//     }
-//   });
+    }
+  });
 
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F1') {
+      event.preventDefault();
+      f1.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F1') {
+      event.preventDefault();
+      f1.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F2') {
+      event.preventDefault();
+      f2.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F2') {
+      event.preventDefault();
+      f2.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F3') {
+      event.preventDefault();
+      f3.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F3') {
+      event.preventDefault();
+      f3.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F4') {
+      event.preventDefault();
+      f4.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F4') {
+      event.preventDefault();
+      f4.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F5') {
+      event.preventDefault();
+      f5.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F5') {
+      event.preventDefault();
+      f5.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F6') {
+      event.preventDefault();
+      f6.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F6') {
+      event.preventDefault();
+      f6.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F7') {
+      event.preventDefault();
+      f7.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F7') {
+      event.preventDefault();
+      f7.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F8') {
+      event.preventDefault();
+      f8.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F8') {
+      event.preventDefault();
+      f8.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F9') {
+      event.preventDefault();
+      f9.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F9') {
+      event.preventDefault();
+      f9.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F10') {
+      event.preventDefault();
+      f10.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F10') {
+      event.preventDefault();
+      f10.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F11') {
+      event.preventDefault();
+      f11.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F11') {
+      event.preventDefault();
+      f11.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'F12') {
+      event.preventDefault();
+      f12.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'F12') {
+      event.preventDefault();
+      f12.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Insert') {
+      event.preventDefault();
+      ins.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Insert') {
+      event.preventDefault();
+      ins.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Delete') {
+      event.preventDefault();
+      del.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'Delete') {
+      event.preventDefault();
+      del.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      leftArrow.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      leftArrow.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      upArrow.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      upArrow.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      rightArrow.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      rightArrow.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      downArrow.style.backgroundColor = 'green';
+      
+    }
+  });
+  
+  document.addEventListener('keyup', function(event) {
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      downArrow.style.backgroundColor = 'transparent'; 
+      
+    }
+  });
+
+
+  vaporwaveTheme.addEventListener('click', function() {
+    document.body.style.backgroundImage = 'url("https://external-preview.redd.it/LRmT8yJPpoqGulM3_Js5IskqmxqPwgb196NFUtX08oY.jpg?width=1080&crop=smart&auto=webp&s=dca4556b098568c33ed5e4b4d5d62d3c5de3ccbb")';
+    document.body.style.backgroundSize = 'cover';
+    keyboardElement.style.border = '5px solid purple';
+    localStorage.setItem('backgroundImage', 'url("https://external-preview.redd.it/LRmT8yJPpoqGulM3_Js5IskqmxqPwgb196NFUtX08oY.jpg?width=1080&crop=smart&auto=webp&s=dca4556b098568c33ed5e4b4d5d62d3c5de3ccbb")');
+    localStorage.setItem('backgroundSize', 'cover');
+    localStorage.setItem('borderStyle', '5px solid purple');
+  });
+
+  rgbTheme.addEventListener('click', function() {
+    document.body.style.backgroundImage = 'linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #800080, #FF1493, #FFA500, #FFFF00, #00FFFF, #32CD32)';
+    document.body.style.backgroundSize = '300% 300%';
+    keyboardElement.style.border = 'solid';
+    localStorage.setItem('backgroundImage', 'linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #800080, #FF1493, #FFA500, #FFFF00, #00FFFF, #32CD32)');
+    localStorage.setItem('backgroundSize', '300% 300%');
+    localStorage.setItem('borderStyle', '5px solid');
+});
+
+holidayTheme.addEventListener('click', function() {
+    document.body.style.backgroundImage = 'url("https://img.freepik.com/free-photo/christmas-fir-branch-with-copy-space_23-2148703386.jpg?w=1060&t=st=1700436216~exp=1700436816~hmac=f7c944f2e2cd83e9c5cb3d361bd716bb719ca6cf406b28ba53e6f4ee8471e473")';
+    document.body.style.backgroundSize = 'cover';
+    keyboardElement.style.border = 'solid red';
+    localStorage.setItem('backgroundImage', 'url("https://img.freepik.com/free-photo/christmas-fir-branch-with-copy-space_23-2148703386.jpg?w=1060&t=st=1700436216~exp=1700436816~hmac=f7c944f2e2cd83e9c5cb3d361bd716bb719ca6cf406b28ba53e6f4ee8471e473")');
+    localStorage.setItem('backgroundSize', 'cover');
+    localStorage.setItem('borderStyle', '5px solid red');
+  });

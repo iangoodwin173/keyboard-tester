@@ -43,6 +43,11 @@ body {
     
   }
 
+  #hiddenElement {
+    display: none;
+    color: yellow;
+    text-shadow: 1px 1px black;
+  }
   
   .row {
     display: flex;

@@ -86,12 +86,15 @@ var keys = {
     document.body.style.backgroundImage = localStorage.getItem('backgroundImage');
     document.body.style.backgroundSize = localStorage.getItem('backgroundSize');
     keyboardElement.style.border = localStorage.getItem('borderStyle');
+    headingColor.style.color = localStorage.getItem('headingColor');
+    instructionColor.style.color = localStorage.getItem('instructionColor');
   }
 
 var rgbTheme = document.getElementById('rgb-theme');
 var vaporwaveTheme = document.getElementById('vaporwave-theme');
 var holidayTheme = document.getElementById('holiday-theme');
 var keyboardElement = document.querySelector('.keyboard');
+
 
 
 document.addEventListener('keydown', function(event) {
@@ -1355,6 +1358,7 @@ document.addEventListener('keydown', function(event) {
     localStorage.setItem('backgroundImage', 'url("https://external-preview.redd.it/LRmT8yJPpoqGulM3_Js5IskqmxqPwgb196NFUtX08oY.jpg?width=1080&crop=smart&auto=webp&s=dca4556b098568c33ed5e4b4d5d62d3c5de3ccbb")');
     localStorage.setItem('backgroundSize', 'cover');
     localStorage.setItem('borderStyle', '5px solid purple');
+    
   });
 
   rgbTheme.addEventListener('click', function() {
@@ -1364,6 +1368,7 @@ document.addEventListener('keydown', function(event) {
     localStorage.setItem('backgroundImage', 'linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #800080, #FF1493, #FFA500, #FFFF00, #00FFFF, #32CD32)');
     localStorage.setItem('backgroundSize', '300% 300%');
     localStorage.setItem('borderStyle', '5px solid');
+    
 });
 
 holidayTheme.addEventListener('click', function() {
@@ -1373,4 +1378,5 @@ holidayTheme.addEventListener('click', function() {
     localStorage.setItem('backgroundImage', 'url("https://img.freepik.com/free-photo/christmas-fir-branch-with-copy-space_23-2148703386.jpg?w=1060&t=st=1700436216~exp=1700436816~hmac=f7c944f2e2cd83e9c5cb3d361bd716bb719ca6cf406b28ba53e6f4ee8471e473")');
     localStorage.setItem('backgroundSize', 'cover');
     localStorage.setItem('borderStyle', '5px solid red');
+    
   });

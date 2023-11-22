@@ -11,3 +11,4 @@ Anyone is welcome to clone this repository and use it for any private and/or non
 
 ## Deployed Link Application
 You can find the link to the deployed application here:
+https://iangoodwin173.github.io/keyboard-tester/
